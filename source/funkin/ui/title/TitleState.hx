@@ -448,13 +448,13 @@ class TitleState extends MusicBeatState
           switch (i + 1)
           {
             case 1:
-              createCoolText(['The', 'Funkin Crew Inc']);
+              createCoolText(['Brainy7890']);
             case 3:
               addMoreText('presents');
             case 4:
               deleteCoolText();
             case 5:
-              createCoolText(['In association', 'with']);
+              createCoolText(['Not in association', 'with']);
             case 7:
               addMoreText('newgrounds');
               if (ngSpr != null) ngSpr.visible = true;
@@ -468,16 +468,11 @@ class TitleState extends MusicBeatState
             case 12:
               deleteCoolText();
             case 13:
-              addMoreText('Friday');
+              addMoreText('Brainy\'s');
             case 14:
-              // easter egg for when the game is trending with the wrong spelling
-              // the random intro text would be "trending--only on x"
-
-              if (curWacky[0] == "trending") addMoreText('Nigth');
-              else
-                addMoreText('Night');
+              addMoreText('FNF');
             case 15:
-              addMoreText('Funkin');
+              addMoreText('Fork');
             case 16:
               skipIntro();
           }
