@@ -462,7 +462,7 @@ class Project extends HXProject
    * requiring them to click anywhere on the screen to start the game.
    * This is done to ensure that the audio context can initialize properly on HTML5. Not necessary on desktop.
    */
-  static final FEATURE_TOUCH_HERE_TO_PLAY:FeatureFlag = "FEATURE_TOUCH_HERE_TO_PLAY";
+  static final FEATURE_TOUCH_HERE_TO_PLAY:FeatureFlag = "";
 
   /**
    * `-DFEATURE_VIDEO_PLAYBACK`
@@ -807,7 +807,7 @@ class Project extends HXProject
 
     // Video playback should be enabled on desktop, web, and mobile.
     // HXCPP has trouble with iOS simulator builds though...
-    FEATURE_VIDEO_PLAYBACK.apply(this, !isIOSSimulator());
+    //FEATURE_VIDEO_PLAYBACK.apply(this, !isIOSSimulator());
 
     // Should be true on desktop, non-tester builds.
     // We don't want testers to accidentally leak songs to their Discord friends!
