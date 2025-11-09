@@ -2827,7 +2827,7 @@ class PlayState extends MusicBeatSubState
       {
         // Pressed a wrong key with no notes nearby.
         // Perform a ghost miss (anti-spam).
-        ghostNoteMiss(input.noteDirection, notesInRange.length > 0);
+        //ghostNoteMiss(input.noteDirection, notesInRange.length > 0);
 
         // Play the strumline animation.
         playerStrumline.playPress(input.noteDirection);

@@ -807,14 +807,14 @@ class Project extends HXProject
 
     // Video playback should be enabled on desktop, web, and mobile.
     // HXCPP has trouble with iOS simulator builds though...
-    //FEATURE_VIDEO_PLAYBACK.apply(this, !isIOSSimulator());
+    FEATURE_VIDEO_PLAYBACK.apply(this, !isIOSSimulator());
 
     // Should be true on desktop, non-tester builds.
     // We don't want testers to accidentally leak songs to their Discord friends!
     FEATURE_DISCORD_RPC.apply(this, isDesktop() && !FEATURE_DEBUG_FUNCTIONS.isEnabled(this));
 
     // Newgrounds features
-    FEATURE_NEWGROUNDS.apply(this, !isMobile());
+    FEATURE_NEWGROUNDS.apply(this, false);
     FEATURE_NEWGROUNDS_DEBUG.apply(this, false);
     FEATURE_NEWGROUNDS_TESTING_MEDALS.apply(this, FEATURE_NEWGROUNDS.isEnabled(this) && FEATURE_DEBUG_FUNCTIONS.isEnabled(this));
     FEATURE_NEWGROUNDS_AUTOLOGIN.apply(this, FEATURE_NEWGROUNDS.isEnabled(this) && isWeb());
